@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.App {
+  text-align: center;
+}
+
+body {
+  background-image: url(images/Background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: auto;
+
+}
+
+
+.navbar {
+  border-bottom: 1px solid #00000050;
+}
+
+.nav-item a {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn {
+  border-radius: 999px;
+  margin-top: auto;
+  background-color: rgb(5, 5, 115);
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 16px 32px;
+
+}
+
+.container {
+  height: 500px;
+  border-radius: 10px;
+  background: linear-gradient(96deg, #F0F7FC 23.46%, rgba(249, 249, 247, 0.00) 100%);
+  padding: 32px;
+  border-radius: 32px;
+}
+
+h1 {
+  color: rgb(5, 5, 115);
+  font-weight: bold;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.right-container {
+  max-width: 80%;
+  align-items: right;
+
+}
+
+.right-container p {
+  width: 20%;
+}
+
+.left-container img {
+  max-width: 70%;
+}
+
+.navbar-logo {
+  display: flex;
+  width: 193px;
+  height: 49px;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  gap: 1px;
+}
+
+.navbar-logo img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navbar-background {
+  background-image: url(images/Background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+  width: 100%;
+  padding: 32px;
+  background-color: #0e2e58;
+}
+
+.social-media {
+  display: flex;
+  align-items: flex-start;
+  gap: 51px;
+}
+
+.social-media-icon {
+  display: flex;
+  justify-content: space-between;
+  width: 216px;
+  height: 67px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  border: 1px solid #fff;
+  align-items: center;
+}
+
+.instructor-image {
+  height: 70%;
+}
+
+.icon {
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.social-media-icon p {
+  margin: 0px 0px 0px 16px;
+  color: #ECEEF1;
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.footer h1 {
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@media (max-width:768px) {
+
+  .container {
+    height: max-content;
+  }
+  .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-media {
+    flex-direction: column;
+  }
+
+  .right-container {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width:992px) {
+
+
+  .navbar-collapse {
+    flex-direction: column;
+
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.card {
+  display: flex;
+  padding: 16px;
+  border-radius: 21px;
+  border: 1px solid #FCFCFC;
+  background: #F6F9F6;
+}
+
+.card-image-top {
+  width: 79px;
+  height: 79px;
+  flex-shrink: 0;
+}
+
+.card-body {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

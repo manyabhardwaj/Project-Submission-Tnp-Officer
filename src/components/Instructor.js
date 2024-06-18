@@ -52,10 +52,8 @@ export default function Body() {
             <hr />
             <div className={`container-content my-4 ${direction}`}>
                 <div className="card-container d-flex">
-                    <div className="left-container">
-                        <img src={instructors[currentIndex].image} alt="Instructor" className='instructor-image' />
-                    </div>
-                    <div className="right-container">
+                    <img src={instructors[currentIndex].image} alt="Instructor" className='instructor-image' />
+                    <div className="right">
                         <h3>{instructors[currentIndex].name}</h3>
                         <h5>{instructors[currentIndex].title}</h5>
                         <p>{instructors[currentIndex].description}</p>

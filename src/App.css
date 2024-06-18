@@ -3,20 +3,23 @@
 .App {
   text-align: center;
 }
-h3{
+
+h3 {
   color: #0e2e58;
   font-weight: bold;
   font-size: 34px;
 }
 
-h5{
+h5 {
   color: #0e2e58;
   font-size: 28px;
 }
-p{
+
+p {
   color: #0e2e58;
   font-size: 22px;
 }
+
 body {
   background-image: url(images/Background.png);
   background-size: cover;
@@ -142,11 +145,13 @@ h1 {
 }
 
 .container {
-  background-color: #f0f8ff; /* Example background color */
+  background-color: #f0f8ff;
+  /* Example background color */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* Ensure content does not overflow the container */
+  overflow: hidden;
+  /* Ensure content does not overflow the container */
   position: relative;
 }
 
@@ -159,6 +164,7 @@ h1 {
 .card-container {
   display: flex;
   width: 100%;
+  justify-content: space-between;
 }
 
 .instructor-title {
@@ -167,23 +173,15 @@ h1 {
   align-items: center;
 }
 
-.instructor-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
 }
-
-.left-container, .right-container {
-  flex: 1;
-}
-
-.right-container {
-  padding-left: 20px;
-}
-
 
 .instructor-image {
-  height: 70%;
+  width: 300px;
+  height: 300px;
 }
 
 .icon {
@@ -206,7 +204,7 @@ h1 {
   font-style: normal;
   font-weight: bold;
 
- padding-left: 15px;
+  padding-left: 15px;
 }
 
 .footer h1 {
@@ -224,6 +222,7 @@ h1 {
   .container {
     height: max-content;
   }
+
   .d-flex {
     flex-direction: column;
     align-items: center;

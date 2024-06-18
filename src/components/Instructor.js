@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import InstructorImage from "../images/profile.png";
 import '../App.css';
 
@@ -29,6 +29,15 @@ export default function Body() {
     const carouselRef = useRef(null);
     const touchStartX = useRef(0);
     const touchEndX = useRef(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setDirection('next');
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % instructors.length);
+        }, 3000); // Change slide every 1 second
+
+        return () => clearInterval(interval);
+    }, []);
 
     const handlePrev = () => {
         setDirection('prev');

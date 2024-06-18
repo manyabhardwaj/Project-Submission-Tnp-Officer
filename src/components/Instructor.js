@@ -45,8 +45,16 @@ export default function Body() {
                     <p>Learn from Our Experienced and Dedicated Instructors.</p>
                 </div>
                 <div className="buttons">
-                    <button onClick={handlePrev} className="btn btn-primary">Prev</button>
-                    <button onClick={handleNext} className="btn btn-primary">Next</button>
+                    <button onClick={handlePrev} className="btn btn-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 19L8 12L15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </button>
+                    <button onClick={handleNext} className="btn btn-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 5L16 12L9 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </button>
                 </div>
             </div>
             <hr />

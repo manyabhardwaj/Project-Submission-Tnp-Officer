@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import InstructorImage from "../images/profile.png"; // Assuming the image path is correct
+import InstructorImage from "../images/profile.png";
 import '../App.css';
 
 const instructors = [
@@ -50,7 +50,7 @@ export default function Body() {
 
     const handleTouchEnd = () => {
         const difference = touchStartX.current - touchEndX.current;
-        const threshold = 100; // Adjust this value as needed for sensitivity
+        const threshold = 100;
 
         if (difference > threshold) {
             handleNext();

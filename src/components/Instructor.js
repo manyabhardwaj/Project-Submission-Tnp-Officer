@@ -12,13 +12,13 @@ const instructors = [
     {
         name: "Instructor 2",
         title: "Senior Instructor @TNP Officer",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid accusantium, nisi nostrum modi iste illo officiis neque? Doloribus consequatur quaerat, quis iste quae beatae veniam accusantium suscipit ducimus. Qui, unde.",
+        description: "Lorem ipsum dolor sit amet consectnisi nostrum modi iste illo officiis neque?  consequatur quaerat, quis iste quae beatae veniam accusantium suscipit ducimus. Qui, unde.",
         image: InstructorImage
     },
     {
         name: "Instructor 3",
         title: "Head Instructor @TNP Officer",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid accusantium, nisi nostrum modi iste illo officiis neque? Doloribus consequatur quaerat, quis iste quae beatae veniam accusantium suscipit ducimus. Qui, unde.",
+        description: " elit. Aliquid accusantium, nisi nostrum modi iste illo officiis neque? Doloribus consequatur quaerat, quis iste quae beatae veniam accusantium suscipit ducimus. Qui, unde.",
         image: InstructorImage
     }
 ];

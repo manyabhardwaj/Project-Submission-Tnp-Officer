@@ -215,6 +215,10 @@ h1 {
     flex-direction: column;
     align-items: center;
   }
+  .instructor-image{
+    width: 200px;
+    height:200px;
+  }
 
   .social-media {
     flex-direction: column;

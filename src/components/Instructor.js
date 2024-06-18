@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import InstructorImage from "../images/profile.png";
-
-
 import '../App.css';
+
+/* For Creating Different page of Information*/
 
 const instructors = [
     {
@@ -32,14 +32,18 @@ export default function Body() {
     const touchStartX = useRef(0);
     const touchEndX = useRef(0);
 
+    /* for creating the time stamp for auto change of the information */
+
     useEffect(() => {
         const interval = setInterval(() => {
             setDirection('next');
             setCurrentIndex((prevIndex) => (prevIndex + 1) % instructors.length);
-        }, 2000); // Change slide every 1 second
+        }, 3000); 
 
         return () => clearInterval(interval);
     }, []);
+
+    /* For working of Arrow button  */
 
     const handlePrev = () => {
         setDirection('prev');
@@ -54,7 +58,7 @@ export default function Body() {
     const handleTouchStart = (e) => {
         touchStartX.current = e.touches[0].clientX;
     };
-
+    
     const handleTouchMove = (e) => {
         touchEndX.current = e.touches[0].clientX;
     };
@@ -91,8 +95,9 @@ export default function Body() {
                 </div>
             </div>
             <hr />
+
             <div
-                className={`container-content my-4 ${direction}`}
+               className={`container-content my-4 ${direction}`}
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}

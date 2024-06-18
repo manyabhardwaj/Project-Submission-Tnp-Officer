@@ -36,8 +36,6 @@ export default function Testimonial(props) {
           </div>
         </div>
       </div>
-
-    </div >
-
+    </div>
   )
 }

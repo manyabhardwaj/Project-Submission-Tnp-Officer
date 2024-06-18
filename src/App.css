@@ -133,7 +133,54 @@ h1 {
   border-radius: 999px;
   border: 1px solid #fff;
   align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
+
+.social-media-icon:hover {
+  opacity: 60%;
+}
+
+.container {
+  background-color: #f0f8ff; /* Example background color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure content does not overflow the container */
+  position: relative;
+}
+
+.container-content {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+
+.card-container {
+  display: flex;
+  width: 100%;
+}
+
+.instructor-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instructor-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.left-container, .right-container {
+  flex: 1;
+}
+
+.right-container {
+  padding-left: 20px;
+}
+
 
 .instructor-image {
   height: 70%;

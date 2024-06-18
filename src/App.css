@@ -3,7 +3,20 @@
 .App {
   text-align: center;
 }
+h3{
+  color: #0e2e58;
+  font-weight: bold;
+  font-size: 34px;
+}
 
+h5{
+  color: #0e2e58;
+  font-size: 28px;
+}
+p{
+  color: #0e2e58;
+  font-size: 22px;
+}
 body {
   background-image: url(images/Background.png);
   background-size: cover;
@@ -144,7 +157,9 @@ h1 {
   font-family: "Inter", sans-serif;
   font-size: 28px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: bold;
+
+ padding-left: 15px;
 }
 
 .footer h1 {

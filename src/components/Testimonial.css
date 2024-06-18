@@ -1,6 +1,6 @@
 .card{
     margin-top: 12%;
-width: 18rem;
+width: 20rem;
 
 height: auto;
 display: flex;
@@ -11,10 +11,18 @@ display: flex;
     max-width: 1200px;
     margin: auto;
   }
+  .card-title{
+    color: #0e2e58;
+  }
+  .card-title h4{
+    color: #0e2e58;
+    font-weight: 400;
+  }
   
   .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+   
   }
   
   .card-img-top {

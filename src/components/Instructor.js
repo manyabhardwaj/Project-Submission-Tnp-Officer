@@ -6,7 +6,7 @@ export default function body(props) {
   return (
     <div className="container my-5 bg-blue">
       <div className="container-content my-4">
-        <h1>Our Instructor</h1>
+        <h1>Our Instructors</h1>
         <p>Learn from Our Experienced and Dedicated Instructors.</p>
         <hr />
         <div className="d-flex">

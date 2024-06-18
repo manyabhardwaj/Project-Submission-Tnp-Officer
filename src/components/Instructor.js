@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import InstructorImage from "../images/profile.png"; // Assuming the image path is correct
 import '../App.css';
 
@@ -12,13 +12,13 @@ const instructors = [
     {
         name: "Instructor 2",
         title: "Senior Instructor @TNP Officer",
-        description: "Lorem ipsum dolor sit amet consectnisi nostrum modi iste illo officiis neque?  consequatur quaerat, quis iste quae beatae veniam accusantium suscipit ducimus. Qui, unde.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid accusantium, nisi nostrum modi iste illo officiis neque? Doloribus consequatur quaerat, quis iste quae beatae veniam accusantium suscipit ducimus. Qui, unde.",
         image: InstructorImage
     },
     {
         name: "Instructor 3",
         title: "Head Instructor @TNP Officer",
-        description: " elit. Aliquid accusantium, nisi nostrum modi iste illo officiis neque? Doloribus consequatur quaerat, quis iste quae beatae veniam accusantium suscipit ducimus. Qui, unde.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid accusantium, nisi nostrum modi iste illo officiis neque? Doloribus consequatur quaerat, quis iste quae beatae veniam accusantium suscipit ducimus. Qui, unde.",
         image: InstructorImage
     }
 ];
@@ -26,6 +26,9 @@ const instructors = [
 export default function Body() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [direction, setDirection] = useState('');
+    const carouselRef = useRef(null);
+    const touchStartX = useRef(0);
+    const touchEndX = useRef(0);
 
     const handlePrev = () => {
         setDirection('prev');
@@ -35,6 +38,25 @@ export default function Body() {
     const handleNext = () => {
         setDirection('next');
         setCurrentIndex((prevIndex) => (prevIndex + 1) % instructors.length);
+    };
+
+    const handleTouchStart = (e) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchMove = (e) => {
+        touchEndX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = () => {
+        const difference = touchStartX.current - touchEndX.current;
+        const threshold = 100; // Adjust this value as needed for sensitivity
+
+        if (difference > threshold) {
+            handleNext();
+        } else if (difference < -threshold) {
+            handlePrev();
+        }
     };
 
     return (
@@ -58,7 +80,13 @@ export default function Body() {
                 </div>
             </div>
             <hr />
-            <div className={`container-content my-4 ${direction}`}>
+            <div
+                className={`container-content my-4 ${direction}`}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+                ref={carouselRef}
+            >
                 <div className="card-container d-flex">
                     <img src={instructors[currentIndex].image} alt="Instructor" className='instructor-image' />
                     <div className="right">

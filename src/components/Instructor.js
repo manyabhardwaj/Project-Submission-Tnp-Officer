@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import InstructorImage from "../images/profile.png";
+import InstructorImage from "../images/profile.png";
+
 import '../App.css';
 
 const instructors = [
@@ -34,7 +36,7 @@ export default function Body() {
         const interval = setInterval(() => {
             setDirection('next');
             setCurrentIndex((prevIndex) => (prevIndex + 1) % instructors.length);
-        }, 3000); // Change slide every 1 second
+        }, 2000); // Change slide every 1 second
 
         return () => clearInterval(interval);
     }, []);

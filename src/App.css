@@ -72,16 +72,6 @@ h1 {
   width: 100%;
 }
 
-.right-container {
-  max-width: 80%;
-  align-items: right;
-
-}
-
-.right-container p {
-  width: 20%;
-}
-
 .left-container img {
   max-width: 70%;
 }
@@ -146,12 +136,10 @@ h1 {
 
 .container {
   background-color: #f0f8ff;
-  /* Example background color */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  /* Ensure content does not overflow the container */
   position: relative;
 }
 
@@ -235,6 +223,10 @@ h1 {
   .right-container {
     max-width: 100%;
     margin-top: 40px;
+  }
+
+  .right {
+    width: 90%;
   }
 }
 

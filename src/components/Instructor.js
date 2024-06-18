@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import InstructorImage from "../images/profile.png";
-import InstructorImage from "../images/profile.png";
+
 
 import '../App.css';
 
